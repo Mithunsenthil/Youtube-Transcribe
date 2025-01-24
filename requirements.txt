@@ -5,4 +5,4 @@ yfinance==0.1.70
 plotly==5.7.0
 numpy==1.22.3
 python-dateutil==2.8.2
-beautiful-soup
+beautifulsoup4
