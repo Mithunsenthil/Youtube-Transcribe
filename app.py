@@ -69,6 +69,10 @@ def main():
     # Create tabs for recording or uploading audio
     tab1, tab2 = st.tabs(["Record Audio", "Upload Audio"])
 
+    audio_bytes = None
+    if "audio_files" not in os.listdir():
+        os.makedirs("audio_files")
+
     with tab1:
         audio_bytes = audio_recorder()
         if audio_bytes:
@@ -84,22 +88,30 @@ def main():
     # Transcription action
     if st.button("Transcribe"):
         try:
+            # Check for audio files
+            audio_files = [f for f in os.listdir("audio_files") if f.startswith("audio")]
+            if not audio_files:
+                st.error("No audio files found for transcription. Please record or upload an audio file.")
+                return
+
             # Find the newest audio file
             audio_file_path = max(
-                [f for f in os.listdir(".") if f.startswith("audio")],
+                [os.path.join("audio_files", f) for f in audio_files],
                 key=os.path.getctime,
             )
+
             # Transcribe the audio file
             transcript_text = transcribe_audio(audio_file_path)
             st.header("Transcript")
             st.write(transcript_text)
+
             # Save and allow downloading the transcript
             with open("transcript.txt", "w") as f:
                 f.write(transcript_text)
             st.download_button("Download Transcript", transcript_text)
+
         except Exception as e:
             st.error(f"An error occurred during transcription: {e}")
-
 
 if __name__ == "__main__":
     working_dir = os.path.dirname(os.path.abspath(__file__))
