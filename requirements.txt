@@ -9,3 +9,6 @@ openai==0.28
 openai-whisper
 ffmpeg-python
 ffmpeg
+seaborn
+matplotlib
+time
