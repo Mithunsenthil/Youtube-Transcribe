@@ -1,14 +1,7 @@
-youtube_transcript_api
 streamlit
-google-generativeai
 python-dotenv
 pathlib
 yfinance
-audio-recorder-streamlit
-openai==0.28
-openai-whisper
-ffmpeg-python
-ffmpeg
 seaborn
 matplotlib
 time
