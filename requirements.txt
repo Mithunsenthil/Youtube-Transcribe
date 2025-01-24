@@ -4,4 +4,3 @@ pathlib
 yfinance
 seaborn
 matplotlib
-time
