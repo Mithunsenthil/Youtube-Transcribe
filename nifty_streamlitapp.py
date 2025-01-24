@@ -185,7 +185,7 @@ elif nav_option == "Volatility of Stock":
 
 
 
-    data = yf.download(nifty50_tickers, start="2023-01-01", end="2024-01-01")['Adj Close']
+    data = yf.download(nifty50_tickers, start="2023-01-01", end="2025-01-23")['Adj Close']
 
 
     returns = data.pct_change()
