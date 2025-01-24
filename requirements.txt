@@ -5,7 +5,7 @@ python-dotenv
 pathlib
 yfinance
 audio-recorder-streamlit
-openai
+openai==0.28
 openai-whisper
 ffmpeg-python
 ffmpeg
