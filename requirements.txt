@@ -8,3 +8,4 @@ audio-recorder-streamlit
 openai
 openai-whisper
 ffmpeg-python
+ffmpeg
