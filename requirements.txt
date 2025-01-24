@@ -4,3 +4,6 @@ google-generativeai
 python-dotenv
 pathlib
 yfinance
+audio-recorder-streamlit
+openai
+python-dotenv
