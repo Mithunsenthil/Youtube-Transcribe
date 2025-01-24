@@ -76,7 +76,6 @@ pyrsistent
 PySocks
 python-dateutil
 pytz
-pytz-deprecation-shim
 pywin32
 pywinpty
 pyzmq
