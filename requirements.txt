@@ -4,3 +4,4 @@ pathlib
 yfinance
 seaborn
 matplotlib
+plotly
