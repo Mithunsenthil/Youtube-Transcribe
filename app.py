@@ -41,7 +41,9 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Import API key from .env file
 dotenv.load_dotenv()
-openai.api_key = "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"
+openai.api_key = "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"
+
+
 def transcribe(audio_file):
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
     return transcript
