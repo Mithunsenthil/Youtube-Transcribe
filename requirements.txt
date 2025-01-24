@@ -6,4 +6,4 @@ pathlib
 yfinance
 audio-recorder-streamlit
 openai
-python-dotenv
+whispher
