@@ -29,6 +29,7 @@ import os
 import sys
 import datetime
 import whisper
+from openai import OpenAI
 import streamlit as st
 from audio_recorder_streamlit import audio_recorder
 
