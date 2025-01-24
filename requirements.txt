@@ -75,7 +75,6 @@ pyparsing
 pyrsistent
 PySocks
 python-dateutil
-pytz
 pywin32
 pywinpty
 pyzmq
