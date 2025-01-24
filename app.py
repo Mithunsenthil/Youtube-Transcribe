@@ -30,7 +30,6 @@ import sys
 import datetime
 import whisper
 import streamlit as st
-from ffmpeg import FFmpeg
 from audio_recorder_streamlit import audio_recorder
 
 
