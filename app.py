@@ -48,13 +48,22 @@ def transcribe(audio_file):
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
     return transcript
 
-
 def save_audio_file(audio_bytes, file_extension):
+    save_dir = "audio_files"
+    os.makedirs(save_dir, exist_ok=True)
+    
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    file_name = f"audio_{timestamp}.{file_extension}"
-    with open(file_name, "wb") as f:
-        f.write(audio_bytes)
-    return file_name
+    file_name = os.path.join(save_dir, f"audio_{timestamp}.{file_extension}")
+    
+    try:
+        with open(file_name, "wb") as f:
+            f.write(audio_bytes)
+        st.success(f"File saved successfully as {file_name}")
+        return file_name  # Return the saved file's name
+    except Exception as e:
+        st.error(f"Error saving file: {e}")
+        return None
+
 
 
 def transcribe_audio(file_path):
