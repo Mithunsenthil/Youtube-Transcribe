@@ -41,7 +41,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Import API key from .env file
 dotenv.load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = os.getenv("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")
 
 
 def transcribe(audio_file):
